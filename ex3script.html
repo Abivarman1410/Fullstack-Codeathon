@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm(event) {
+            let userInput = document.getElementById("userInput").value;
+            if (userInput.trim() === "") {
+                alert("Please enter a value before submitting.");
+                event.preventDefault(); // Prevent form submission
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form onsubmit="validateForm(event)">
+        <label for="userInput">Enter something:</label>
+        <input type="text" id="userInput" name="userInput">
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
